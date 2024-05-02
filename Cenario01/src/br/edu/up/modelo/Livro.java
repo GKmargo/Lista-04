@@ -13,6 +13,9 @@ public class Livro {
         this.autores = autores;
         this.isbn = isbn;
         this.ano = ano;
+
+        Livro livro01 = new Livro(codigo, titulo, autores, isbn, ano);
+        livro01.setCodigo("");
     }
 
     public String getCodigo() {
@@ -55,5 +58,4 @@ public class Livro {
         this.ano = ano;
     }
 
-    
 }
