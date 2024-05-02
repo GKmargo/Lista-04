@@ -1,4 +1,5 @@
-package modelo;
+package br.edu.up.modelo;
+
 
 public class Ponto {
     private double x;

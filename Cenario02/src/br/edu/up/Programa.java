@@ -1,5 +1,7 @@
-import modelo.Ponto;
-import Util.Prompt;
+package br.edu.up;
+
+import br.edu.up.modelo.Ponto;
+import br.edu.up.Util.Prompt;
 
 public class Programa {
 
