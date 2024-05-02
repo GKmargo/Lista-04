@@ -14,7 +14,6 @@ public class Ponto {
         this.y = y;
     }
 
-    // Método para calcular a distância entre dois pontos
     public double calcularDistancia(Ponto outroPonto) {
         return Math.sqrt(Math.pow(this.x - outroPonto.x, 2) + Math.pow(this.y - outroPonto.y, 2));
     }
