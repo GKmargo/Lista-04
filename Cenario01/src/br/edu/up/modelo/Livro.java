@@ -3,7 +3,7 @@ package modelo;
 public class Livro {
     private String codigo;
     private String titulo;
-    private String[] autores = new String[3];
+    private String[] autores = new String[2];
     private String isbn;
     private int ano;
     
@@ -13,9 +13,6 @@ public class Livro {
         this.autores = autores;
         this.isbn = isbn;
         this.ano = ano;
-
-        Livro livro01 = new Livro(codigo, titulo, autores, isbn, ano);
-        livro01.setCodigo("");
     }
 
     public String getCodigo() {
