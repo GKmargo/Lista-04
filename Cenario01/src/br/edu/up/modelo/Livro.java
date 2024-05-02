@@ -1,9 +1,9 @@
-package modelo;
+package br.edu.up.modelo;
 
 public class Livro {
     private String codigo;
     private String titulo;
-    private String[] autores = new String[2];
+    private String[] autores = new String[3];
     private String isbn;
     private int ano;
     
