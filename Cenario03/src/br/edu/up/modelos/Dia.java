@@ -7,4 +7,13 @@ public class Dia{
     public Dia(int diaMes) {
         this.diaMes = diaMes;
     }
+
+    public int getDiaMes() {
+        return diaMes;
+    }
+
+    public void setDiaMes(int diaMes) {
+        this.diaMes = diaMes;
+    }
+    
 }

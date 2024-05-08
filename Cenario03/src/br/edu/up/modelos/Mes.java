@@ -10,4 +10,20 @@ public class Mes {
         this.qtdDias = qtdDias;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getQtdDias() {
+        return qtdDias;
+    }
+
+    public void setQtdDias(int qtdDias) {
+        this.qtdDias = qtdDias;
+    }
+    
 }
