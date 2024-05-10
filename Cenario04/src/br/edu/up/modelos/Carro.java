@@ -1,3 +1,4 @@
+// Veiculo.java
 package br.edu.up.modelos;
 
 public class Carro {
@@ -35,4 +36,9 @@ public class Carro {
         this.cor = cor;
     }
 
+    // metodo para retornar as informações do carro em uma string formatada
+    @Override
+    public String toString() {
+        return "Veículo: [Modelo: " + modelo + ", Placa: " + placa + ", Cor: " + cor + "]";
+    }
 }
