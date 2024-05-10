@@ -15,7 +15,7 @@ public class CadastrarCarro {
         this.vagas = new ArrayList<>();
     }
 
-    public boolean entraVeiculo(Carro veiculo) {
+    public boolean adcionarVeiculo(Carro veiculo) {
         if (vagas.size() < NUM_VAGAS) {
             vagas.add(veiculo);
             totalEntradas++;
@@ -24,7 +24,7 @@ public class CadastrarCarro {
         return false;
     }
 
-    public Carro saiVeiculo(String placa) {
+    public Carro removerVeiculo(String placa) {
         for (Carro veiculo : new ArrayList<>(vagas)){ 
             if (veiculo.getPlaca().equals(placa)) { 
                 vagas.remove(veiculo); 

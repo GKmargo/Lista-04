@@ -5,6 +5,7 @@ import br.edu.up.controles.CadastrarCarro;
 import br.edu.up.modelos.Carro;
 
 public class Menu {
+    CadastrarCarro CadastrarCarro = new CadastrarCarro();
     public void mostrarMenu(){
         while (true) {
             Prompt.separador();
@@ -26,7 +27,7 @@ public class Menu {
                     break;
                 case 2:
                     String placaSaida = Prompt.lerLinha("Digite a placa do veículo que deseja retirar:");
-                    sairVeiculo(placaSaida);
+                    retirarVeiculo(placaSaida);
                     break;
                 case 3:
                     emitirRelatorio();
@@ -41,19 +42,17 @@ public class Menu {
     }
    
     public void cadastrarVeiculo(String modelo, String placa, String cor) {
-        CadastrarCarro CadastrarCarro = new CadastrarCarro();
         Carro veiculo = new Carro(modelo, placa, cor);
-        if (CadastrarCarro.entraVeiculo(veiculo)) {
+        if (CadastrarCarro.adcionarVeiculo(veiculo)) {
             Prompt.imprimir("Veículo estacionado com sucesso.");
         } else {
             Prompt.imprimir("CadastrarCarro cheio.");
         }
     }
 
-    public void sairVeiculo(String placa) {
-        CadastrarCarro CadastrarCarro = new CadastrarCarro();
-        Carro veiculoSaiu = CadastrarCarro.saiVeiculo(placa);
-        if (veiculoSaiu != null) {
+    public void retirarVeiculo(String placa) {
+        Carro veiculo = CadastrarCarro.removerVeiculo(placa);
+        if (veiculo != null) {
             Prompt.imprimir("Veículo com placa " + placa + " retirado com sucesso.");
         } else {
             Prompt.imprimir("Veículo não encontrado no Estacionamento.");
@@ -61,7 +60,6 @@ public class Menu {
     }
 
     public void emitirRelatorio() {
-        CadastrarCarro CadastrarCarro = new CadastrarCarro();
         int totalEntradas = CadastrarCarro.getTotalEntradas();
         int totalSaidas = CadastrarCarro.getTotalSaidas();
         double valorPagamentos = CadastrarCarro.getValorPagamentos();
