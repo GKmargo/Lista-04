@@ -1,9 +1,8 @@
 package br.edu.up;
 
 import br.edu.up.Util.Prompt;
+import br.edu.up.tela.Menu;
 
 public class Programa{
-    public static void main(String[] args) throws Exception {
-        Prompt.imprimir("Hello, World!");
-    }
+    Menu executar = new Menu();
 }
