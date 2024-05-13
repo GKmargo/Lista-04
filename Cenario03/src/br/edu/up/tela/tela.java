@@ -3,20 +3,17 @@ package br.edu.up.tela;
 import br.edu.up.Util.Prompt;
 
 import br.edu.up.controle.CompromissoControle;
-import br.edu.up.controle.DiaControle;
+import br.edu.up.modelos.Compromisso;
+import br.edu.up.modelos.Dia;
+import br.edu.up.modelos.Mes;
+import br.edu.up.modelos.Ano;
+
 
 public class tela {
     public void execute(){
 
-        CompromissoControle controle = new CompromissoControle();
-        DiaControle diaControle = new DiaControle();
+        CompromissoControle controleCompromisso = new CompromissoControle();
 
-
-        System.out.println("Hello, World!");
-
-        String continuar = "sim";
-
-        while(continuar == "sim"){
             
         String pessoa = Prompt.lerLinha("Digite o nome da pessoa: ");
 
@@ -26,17 +23,29 @@ public class tela {
 
         int hora = Prompt.lerInteiro("Digite a hora do compromisso: ");
 
+        int dia = Prompt.lerInteiro("Digite o dia do compromisso: ");
+
         int mes = Prompt.lerInteiro("Digite o mês do compromisso: ");
 
         int ano = Prompt.lerInteiro("Digite o ano do compromisso: ");
 
 
-        controle.adicionarCompromisso(pessoa, local, assunto, hora);
+        Compromisso compromisso = controleCompromisso.adicionarCompromisso(pessoa, local, assunto, hora );
 
-        diaControle.adicionarCompromissos();
+        Dia day = controleCompromisso.adicionarDia(dia);
 
-        continuar = Prompt.lerLinha("Deseja continuar? (sim/não) ");
-        }
+        Mes month = controleCompromisso.adicionarMes(mes);
+
+        Ano year = controleCompromisso.adicionarAno(ano);
+
+
+
+
+        Prompt.imprimir(compromisso);
+
+        Prompt.imprimir("Dia: " + day);
+        Prompt.imprimir("Mês: " + month);
+        Prompt.imprimir("Ano: " + year);
 
 
     }

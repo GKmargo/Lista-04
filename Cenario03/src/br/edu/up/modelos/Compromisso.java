@@ -13,6 +13,13 @@ public class Compromisso {
         this.hora = hora;
     }
 
+    public String toString() {
+        return "Pessoa: " + pessoa + ", Local: " + local + ", Assunto: " + assunto + ", Hora: " + hora;
+    }
+    
+
+
+
     public void setPessoa(String pessoa) {
         this.pessoa = pessoa;
     }
@@ -29,6 +36,24 @@ public class Compromisso {
     public void setHora(int hora) {
         this.hora = hora;
     }
+
+    public String getPessoa() {
+        return pessoa;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public String getAssunto() {
+        return assunto;
+    }
+
+    public int getHora() {
+        return hora;
+    }
+
+    
     
 }
 
