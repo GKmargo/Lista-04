@@ -29,20 +29,12 @@ public class ControleAeroporto {
         return passageiros;
     }
 
-    public void removerPassageiro(Passageiro passageiro) {
-        passageiros.remove(passageiro);
-    }
-
-    public void adicionarTripulante(Tripulante tripulante) {
+    public void adicionarTripulante(Tripulante tripulante, Aeronave aeronave) {
         tripulacao.add(tripulante);
     }
 
     public List<Tripulante> obterTripulacao() {
         return tripulacao;
-    }
-
-    public void removerTripulante(Tripulante tripulante) {
-        tripulacao.remove(tripulante);
     }
 
     public void adicionarAeronave(Aeronave aeronave) {
@@ -53,19 +45,11 @@ public class ControleAeroporto {
         return aeronaves;
     }
 
-    public void removerAeronave(Aeronave aeronave) {
-        aeronaves.remove(aeronave);
-    }
-
     public void adicionarPassagem(Passagem passagem) {
         passagens.add(passagem);
     }
 
     public List<Passagem> obterPassagens() {
         return passagens;
-    }
-
-    public void removerPassagem(Passagem passagem) {
-        passagens.remove(passagem);
     }
 }

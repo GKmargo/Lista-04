@@ -13,6 +13,10 @@ public class Passagem {
         this.dataVoo = dataVoo;
     }
 
+    public Passagem(String nome, String rg, String bagagem, int numAcento, String classeAcento, double dataVoo2) {
+        //TODO Auto-generated constructor stub
+    }
+
     public Passageiro getPassageiro() {
         return passageiro;
     }

@@ -3,8 +3,8 @@ package br.edu.up.modelos;
 public class Comissario extends Tripulante {
     private String idioma;
 
-    public Comissario(String nome, String rg, String id, String martricula, String idioma) {
-        super(nome, rg, id, martricula);
+    public Comissario(String nome, String rg, String id, String martricula, Aeronave aeronave, String idioma) {
+        super(nome, rg, id, martricula, aeronave);
         this.idioma = idioma;
     }
 

@@ -3,7 +3,7 @@ package br.edu.up.modelos;
 public class Aeronave {
     private String codigoAeronave;
     private String tipoAeronave;
-    private int qtdAcentos = 0;
+    private int qtdAcentos;
     
     public Aeronave(String codigoAeronave, String tipoAeronave, int qtdAcentos) {
         this.codigoAeronave = codigoAeronave;
