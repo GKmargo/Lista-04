@@ -2,13 +2,13 @@ package br.edu.up.modelos;
 
 public class Tripulante extends Pessoa{
     private String id;
-    private String martricula;
+    private String matricula;
     private Aeronave aeronave;
 
-    public Tripulante(String nome, String rg, String id, String martricula, Aeronave aeronave) {
+    public Tripulante(String nome, String rg, String id, String matricula, Aeronave aeronave) {
         super(nome, rg);
         this.id = id;
-        this.martricula = martricula;
+        this.matricula = matricula;
         this.aeronave = aeronave;
     }
 
@@ -20,12 +20,12 @@ public class Tripulante extends Pessoa{
         this.id = id;
     }
 
-    public String getMartricula() {
-        return martricula;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setMartricula(String martricula) {
-        this.martricula = martricula;
+    public void setMatricula(String martricula) {
+        this.matricula = martricula;
     }
 
     public Aeronave getAeronave() {

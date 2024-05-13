@@ -1,8 +1,10 @@
 package br.edu.up;
 
-import br.edu.up.Util.Prompt;
-import br.edu.up.tela.Menu;
+import br.edu.up.tela.AeroportoView;
 
 public class Programa{
-    Menu executar = new Menu();
+    public static void main(String[] args) {
+        AeroportoView aeroportoView = new AeroportoView();
+        aeroportoView.executar();
+    }
 }

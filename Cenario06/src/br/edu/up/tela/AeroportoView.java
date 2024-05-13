@@ -146,7 +146,21 @@ public class AeroportoView {
     }
 
     private void exibirTripulacao() {
-        // Implemente a lógica para exibir tripulação
+        List<Tripulante> tripulacao = controleAeroporto.obterTripulacao();
+        Prompt.separador();
+        Prompt.imprimir("Tripulação:");
+        for (Tripulante tripulante : tripulacao) {
+            Prompt.imprimir("Nome: " + tripulante.getNome() + ", RG: " + tripulante.getRg() + ", Identificação: " + tripulante.getId() + ", Matrícula: " + tripulante.getMatricula());
+            if (tripulante instanceof Comissario) {
+                Comissario comissario = (Comissario) tripulante;
+                Prompt.imprimir("Idioma de Fluência: " + comissario.getIdioma());
+            } else if (tripulante instanceof Comandante) {
+                Comandante comandante = (Comandante) tripulante;
+                Prompt.imprimir("Total de Horas de Voo: " + comandante.getTotalHoras());
+            }
+        }
+        Prompt.separador();
     }
-
+    
+    
 }
