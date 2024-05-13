@@ -4,9 +4,8 @@ public class Tripulante extends Pessoa{
     private String id;
     private String martricula;
 
-    public Tripulante(String codigoAeronave, String tipoAeronave, int qtdAcentos, String nome, String rg, String id,
-            String martricula) {
-        super(codigoAeronave, tipoAeronave, qtdAcentos, nome, rg);
+    public Tripulante(String nome, String rg, String id, String martricula) {
+        super(nome, rg);
         this.id = id;
         this.martricula = martricula;
     }

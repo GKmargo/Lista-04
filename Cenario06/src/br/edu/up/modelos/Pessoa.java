@@ -1,11 +1,10 @@
 package br.edu.up.modelos;
 
-public class Pessoa extends Aeronave {
+public class Pessoa{
     private String nome;
     private String rg;
     
-    public Pessoa(String codigoAeronave, String tipoAeronave, int qtdAcentos, String nome, String rg) {
-        super(codigoAeronave, tipoAeronave, qtdAcentos);
+    public Pessoa(String nome, String rg) {
         this.nome = nome;
         this.rg = rg;
     }

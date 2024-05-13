@@ -1,32 +1,40 @@
 package br.edu.up.modelos;
 
-public class Passagem extends Passageiro{
-    private int numAcento;
-    private String classeAcento;
+public class Passagem {
+    private Passageiro passageiro;
+    private int numeroAssento;
+    private String classeAssento;
     private double dataVoo;
 
-    public Passagem(String codigoAeronave, String tipoAeronave, int qtdAcentos, String nome, String rg, String bagagem,
-            int numAcento, String classeAcento, double dataVoo) {
-        super(codigoAeronave, tipoAeronave, qtdAcentos, nome, rg, bagagem);
-        this.numAcento = numAcento;
-        this.classeAcento = classeAcento;
+    public Passagem(Passageiro passageiro, int numeroAssento, String classeAssento, double dataVoo) {
+        this.passageiro = passageiro;
+        this.numeroAssento = numeroAssento;
+        this.classeAssento = classeAssento;
         this.dataVoo = dataVoo;
     }
 
-    public int getNumAcento() {
-        return numAcento;
+    public Passageiro getPassageiro() {
+        return passageiro;
     }
 
-    public void setNumAcento(int numAcento) {
-        this.numAcento = numAcento;
+    public void setPassageiro(Passageiro passageiro) {
+        this.passageiro = passageiro;
     }
 
-    public String getClasseAcento() {
-        return classeAcento;
+    public int getNumeroAssento() {
+        return numeroAssento;
     }
 
-    public void setClasseAcento(String classeAcento) {
-        this.classeAcento = classeAcento;
+    public void setNumeroAssento(int numeroAssento) {
+        this.numeroAssento = numeroAssento;
+    }
+
+    public String getClasseAssento() {
+        return classeAssento;
+    }
+
+    public void setClasseAssento(String classeAssento) {
+        this.classeAssento = classeAssento;
     }
 
     public double getDataVoo() {
@@ -36,6 +44,4 @@ public class Passagem extends Passageiro{
     public void setDataVoo(double dataVoo) {
         this.dataVoo = dataVoo;
     }
-
-    
 }
