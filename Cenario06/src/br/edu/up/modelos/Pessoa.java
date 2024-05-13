@@ -4,8 +4,8 @@ public class Pessoa extends Aeronave {
     private String nome;
     private String rg;
     
-    public Pessoa(String codigo, String tipo, int qtdAcentos, String nome, String rg) {
-        super(codigo, tipo, qtdAcentos);
+    public Pessoa(String codigoAeronave, String tipoAeronave, int qtdAcentos, String nome, String rg) {
+        super(codigoAeronave, tipoAeronave, qtdAcentos);
         this.nome = nome;
         this.rg = rg;
     }
@@ -26,4 +26,5 @@ public class Pessoa extends Aeronave {
         this.rg = rg;
     }
 
+    
 }

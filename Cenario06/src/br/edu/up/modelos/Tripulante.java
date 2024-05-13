@@ -3,10 +3,10 @@ package br.edu.up.modelos;
 public class Tripulante extends Pessoa{
     private String id;
     private String martricula;
-   
-    public Tripulante(String codigo, String tipo, int qtdAcentos, String nome, String rg, String id,
+
+    public Tripulante(String codigoAeronave, String tipoAeronave, int qtdAcentos, String nome, String rg, String id,
             String martricula) {
-        super(codigo, tipo, qtdAcentos, nome, rg);
+        super(codigoAeronave, tipoAeronave, qtdAcentos, nome, rg);
         this.id = id;
         this.martricula = martricula;
     }

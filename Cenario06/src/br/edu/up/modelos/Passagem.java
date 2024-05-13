@@ -4,10 +4,10 @@ public class Passagem extends Passageiro{
     private int numAcento;
     private String classeAcento;
     private double dataVoo;
-    
-    public Passagem(String codigo, String tipo, int qtdAcentos, String nome, String rg, String bagagem, int numAcento,
-            String classeAcento, double dataVoo) {
-        super(codigo, tipo, qtdAcentos, nome, rg, bagagem);
+
+    public Passagem(String codigoAeronave, String tipoAeronave, int qtdAcentos, String nome, String rg, String bagagem,
+            int numAcento, String classeAcento, double dataVoo) {
+        super(codigoAeronave, tipoAeronave, qtdAcentos, nome, rg, bagagem);
         this.numAcento = numAcento;
         this.classeAcento = classeAcento;
         this.dataVoo = dataVoo;

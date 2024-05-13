@@ -1,30 +1,30 @@
 package br.edu.up.modelos;
 
 public class Aeronave {
-    private String codigo;
-    private String tipo;
+    private String codigoAeronave;
+    private String tipoAeronave;
     private int qtdAcentos = 0;
     
-    public Aeronave(String codigo, String tipo, int qtdAcentos) {
-        this.codigo = codigo;
-        this.tipo = tipo;
+    public Aeronave(String codigoAeronave, String tipoAeronave, int qtdAcentos) {
+        this.codigoAeronave = codigoAeronave;
+        this.tipoAeronave = tipoAeronave;
         this.qtdAcentos = qtdAcentos;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getCodigoAeronave() {
+        return codigoAeronave;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCodigoAeronave(String codigoAeronave) {
+        this.codigoAeronave = codigoAeronave;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoAeronave() {
+        return tipoAeronave;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoAeronave(String tipoAeronave) {
+        this.tipoAeronave = tipoAeronave;
     }
 
     public int getQtdAcentos() {
@@ -35,5 +35,6 @@ public class Aeronave {
         this.qtdAcentos = qtdAcentos;
     }
 
+    
     
 }
