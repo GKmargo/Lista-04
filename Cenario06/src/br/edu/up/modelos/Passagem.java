@@ -6,15 +6,10 @@ public class Passagem {
     private String classeAssento;
     private double dataVoo;
 
-    public Passagem(Passageiro passageiro, int numeroAssento, String classeAssento, double dataVoo) {
-        this.passageiro = passageiro;
+    public Passagem( int numeroAssento, String classeAssento, double dataVoo) {
         this.numeroAssento = numeroAssento;
         this.classeAssento = classeAssento;
         this.dataVoo = dataVoo;
-    }
-
-    public Passagem(String nome, String rg, String bagagem, int numAcento, String classeAcento, double dataVoo2) {
-        //TODO Auto-generated constructor stub
     }
 
     public Passageiro getPassageiro() {

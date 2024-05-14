@@ -73,13 +73,12 @@ public class AeroportoView {
     double dataVoo = Prompt.lerDecimal("Data do Voo: ");
 
     Aeronave aeronave = new Aeronave(codigoAeronave, tipoAeronave, qtdAcentos);
-    Passagem passagem = new Passagem(nome, rg, bagagem, numAcento, classeAcento, dataVoo);
+    Passagem passagem = new Passagem( numAcento, classeAcento, dataVoo);
     Passageiro passageiro = new Passageiro(nome, rg, bagagem, aeronave, passagem);
 
-    // Adicionando a passagem ao passageiro
+
     passageiro.adicionarPassagem(passagem);
 
-    // Adicionando o passageiro e a aeronave ao controle do aeroporto
     controleAeroporto.adicionarPassageiro(passageiro);
     controleAeroporto.adicionarAeronave(aeronave);
     Prompt.imprimir("Passageiro adicionado com sucesso!");
