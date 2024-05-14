@@ -29,5 +29,11 @@ public class SeguroVida extends Seguro{
         this.cobreAcidente = cobreAcidente;
     }
     
-    
+    @Override
+    public String toString() {
+        return "SeguroVida{" +
+                "cobreDoenca=" + cobreDoenca +
+                ", cobreAcidente=" + cobreAcidente +
+                "} " + super.toString();
+    }
 }

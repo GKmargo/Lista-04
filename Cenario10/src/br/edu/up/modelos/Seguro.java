@@ -57,4 +57,14 @@ public abstract class Seguro {
         this.dtaFinal = dtaFinal;
     }  
 
+    @Override
+    public String toString() {
+        return "Seguro{" +
+                "apolice='" + apolice + '\'' +
+                ", segurado=" + segurado +
+                ", vlrApolice=" + vlrApolice +
+                ", dtaInicio=" + dtaInicio +
+                ", dtaFinal=" + dtaFinal +
+                '}';
+    }
 }

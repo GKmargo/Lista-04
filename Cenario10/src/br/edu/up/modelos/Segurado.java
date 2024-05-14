@@ -90,4 +90,18 @@ public class Segurado {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
+
+    @Override
+    public String toString() {
+        return "Segurado{" +
+                "nome='" + nome + '\'' +
+                ", RG='" + RG + '\'' +
+                ", CPF='" + CPF + '\'' +
+                ", sexo=" + sexo +
+                ", telefone='" + telefone + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", CEP='" + CEP + '\'' +
+                ", cidade='" + cidade + '\'' +
+                '}';
+    }
 }

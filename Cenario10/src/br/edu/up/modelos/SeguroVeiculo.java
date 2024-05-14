@@ -39,4 +39,12 @@ public class SeguroVeiculo extends Seguro{
         this.cobreVidros = cobreVidros;
     }
 
+    @Override
+    public String toString() {
+        return "SeguroVeiculo{" +
+                "vlrFranquia=" + vlrFranquia +
+                ", temCarroReserva=" + temCarroReserva +
+                ", cobreVidros=" + cobreVidros +
+                "} " + super.toString();
+    }
 }
