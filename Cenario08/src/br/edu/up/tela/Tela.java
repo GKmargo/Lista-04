@@ -7,7 +7,6 @@ import br.edu.up.controles.Agenda;
 import br.edu.up.modelos.Comercial;
 import br.edu.up.modelos.Contato;
 import br.edu.up.modelos.Pessoal;
-
 public class Tela {
     private Agenda agenda;
 
