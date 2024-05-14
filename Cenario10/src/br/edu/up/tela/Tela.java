@@ -66,18 +66,57 @@ public class Tela {
     }
 
     private void incluirSeguro() {
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Incluir seguro selecionado.");
-        // Implemente aqui a lógica para coletar os dados do seguro
-        // e criar uma instância de Seguro, SeguroVida ou SeguroVeiculo
+        System.out.println("\nIncluir seguro selecionado.");
+    
+        System.out.println("Selecione o tipo de seguro:");
+        System.out.println("1. Seguro de Vida");
+        System.out.println("2. Seguro de Veículo");
+        int tipoSeguro = Prompt.lerInteiro("Escolha uma opção: ");
+    
+        System.out.println("Digite o número da apólice:");
+        String apolice = Prompt.lerLinha();
+        System.out.println("Digite o nome do segurado:");
+        String nomeSegurado = Prompt.lerLinha();
+    
+        Segurado segurado = new Segurado(nomeSegurado, nomeSegurado, nomeSegurado, null, nomeSegurado, nomeSegurado, nomeSegurado, nomeSegurado);
+        SeguroController seguroController = new SeguroController();
+    
+        if (tipoSeguro == 1) {
+            System.out.println("Informe se o seguro cobre doença (true/false):");
+            boolean cobreDoenca = Prompt.lerCaractere() == 't';
+    
+            SeguroVida seguroVida = new SeguroVida(apolice, segurado, tipoSeguro, null, null, cobreDoenca, cobreDoenca);
+            seguroController.incluirSeguro(seguroVida);
+        } else if (tipoSeguro == 2) {
+            System.out.println("Informe o valor da franquia:");
+            double vlrFranquia = Prompt.lerDecimal();
+    
+            SeguroVeiculo seguroVeiculo = new SeguroVeiculo(apolice, segurado, vlrFranquia, null, null, vlrFranquia, false, false);
+            seguroController.incluirSeguro(seguroVeiculo);
+        } else {
+            System.out.println("Opção inválida.");
+        }
     }
-
+    
     private void localizarSeguro() {
         Prompt.linhaEmBranco();
         Prompt.imprimir("Localizar seguro selecionado.");
-        // Implemente aqui a lógica para solicitar o número da apólice
-        // e chamar o método localizarSeguro do SeguroController
+    
+        Prompt.imprimir("Digite o número da apólice:");
+        String numeroApolice = Prompt.lerLinha();
+    
+        SeguroController seguroController = new SeguroController();
+
+        Seguro seguroEncontrado = seguroController.localizarSeguro(numeroApolice);
+    
+        if (seguroEncontrado != null) {
+            Prompt.imprimir("Seguro encontrado:");
+            Prompt.imprimir(seguroEncontrado);
+        } else {
+            Prompt.imprimir("Seguro não encontrado.");
+        }
     }
+    
 
     private void excluirSeguro() {
         Prompt.linhaEmBranco();
