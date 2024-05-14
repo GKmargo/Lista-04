@@ -8,6 +8,7 @@ import br.edu.up.modelos.SeguroVeiculo;
 import br.edu.up.Util.Prompt;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Tela {
     private SeguroController seguroController;
@@ -121,26 +122,64 @@ public class Tela {
     private void excluirSeguro() {
         Prompt.linhaEmBranco();
         Prompt.imprimir("Excluir seguro selecionado.");
-        // Implemente aqui a lógica para solicitar o número da apólice
-        // e chamar o método excluirSeguro do SeguroController
+    
+        Prompt.imprimir("Digite o número da apólice do seguro a ser excluído:");
+        String numeroApolice = Prompt.lerLinha();
+    
+        SeguroController seguroController = new SeguroController();
+    
+        boolean excluiu = seguroController.excluirSeguro(numeroApolice);
+    
+        if (excluiu) {
+            Prompt.imprimir("Seguro excluído com sucesso.");
+        } else {
+            Prompt.imprimir("Seguro não encontrado ou não pôde ser excluído.");
+        }
     }
+    
 
     private void excluirTodosSeguros() {
         Prompt.linhaEmBranco();
         Prompt.imprimir("Excluir todos os seguros selecionado.");
-        // Implemente aqui a lógica para confirmar a exclusão de todos os seguros
-        // e chamar o método excluirTodosSeguros do SeguroController
+        Prompt.imprimir("Tem certeza de que deseja excluir todos os seguros? (s/n)");
+        char confirmacao = Prompt.lerCaractere();
+    
+        if (confirmacao == 's') {
+            SeguroController seguroController = new SeguroController();
+
+            seguroController.excluirTodosSeguros();
+            Prompt.imprimir("Todos os seguros foram excluídos com sucesso.");
+        } else {
+            Prompt.imprimir("Exclusão de todos os seguros cancelada.");
+        }
     }
+    
 
     private void listarTodosSeguros() {
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Listar todos os seguros selecionado.");
-        // Implemente aqui a lógica para chamar o método listarTodosSeguros do SeguroController
+    Prompt.linhaEmBranco();
+    Prompt.imprimir("Listar todos os seguros selecionado.");
+
+    SeguroController seguroController = new SeguroController();
+    ArrayList<Seguro> seguros = seguroController.listarTodosSeguros();
+
+    if (!seguros.isEmpty()) {
+        Prompt.imprimir("Lista de todos os seguros:");
+        for (Seguro seguro : seguros) {
+            Prompt.imprimir(seguro);
+        }
+    } else {
+        Prompt.imprimir("Nenhum seguro cadastrado.");
     }
+}
 
     private void quantidadeSeguros() {
-        Prompt.linhaEmBranco();
-        Prompt.imprimir("Ver quantidade de seguros selecionado.");
-        // Implemente aqui a lógica para chamar o método quantidadeSeguros do SeguroController
-    }
+    Prompt.linhaEmBranco();
+    Prompt.imprimir("Ver quantidade de seguros selecionado.");
+
+    SeguroController seguroController = new SeguroController();
+    int quantidade = seguroController.quantidadeSeguros();
+
+    Prompt.imprimir("Quantidade de seguros cadastrados: " + quantidade);
+}
+
 }
