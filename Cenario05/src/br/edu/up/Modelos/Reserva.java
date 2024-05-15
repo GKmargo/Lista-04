@@ -1,7 +1,5 @@
 package br.edu.up.Modelos;
 
-import java.time.LocalDate;
-
 public class Reserva {
     private String responsavel;
     private int quantidadePessoas;

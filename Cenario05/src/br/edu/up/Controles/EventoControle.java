@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.edu.up.Modelos.Evento;
-import br.edu.up.Modelos.Reserva;
 
 public class EventoControle {
 
@@ -46,5 +45,4 @@ public class EventoControle {
     }
 }
 
-// Controlador para reservas
 
