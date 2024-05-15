@@ -4,8 +4,8 @@ import java.util.Scanner;
 import br.edu.up.Controles.EventoControle;
 import br.edu.up.Controles.ReservaControle;
 
-public class tela {
-    public static void main(String[] args) {
+public class Tela {
+    public void main() {
         Scanner scanner = new Scanner(System.in);
         EventoControle eventoControle = new EventoControle();
         ReservaControle reservaControle = new ReservaControle();
