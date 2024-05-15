@@ -1,6 +1,4 @@
-// Estacionamento.java
 package br.edu.up.controles;
-
 import java.util.ArrayList;
 import java.util.List;
 import br.edu.up.modelos.Carro;
@@ -49,6 +47,6 @@ public class CadastrarCarro {
     }
 
     public double getValorPagamentos() {
-        return totalSaidas * 5.00;
+        return totalSaidas * 5;
     }
 }
