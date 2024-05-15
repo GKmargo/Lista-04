@@ -1,13 +1,12 @@
 package br.edu.up;
-import br.edu.up.Util.Prompt;
-import br.edu.up.tela.tela;;
+import br.edu.up.tela.Tela;;
 
 public class Programa {
 
 
     public static void main(String[] args) throws Exception {
 
-        tela tela = new tela();
+        Tela tela = new Tela();
 
         tela.execute();
     }

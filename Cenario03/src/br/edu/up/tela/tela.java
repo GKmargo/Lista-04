@@ -9,7 +9,7 @@ import br.edu.up.modelos.Mes;
 import br.edu.up.modelos.Ano;
 
 
-public class tela {
+public class Tela {
     public void execute(){
 
         CompromissoControle controleCompromisso = new CompromissoControle();
