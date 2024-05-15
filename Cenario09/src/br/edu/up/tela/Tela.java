@@ -161,9 +161,4 @@ public class Tela {
             System.out.println("Cliente não encontrado.");
         }
     }
-
-    public static void main(String[] args) {
-        Tela tela = new Tela();
-        tela.executar();
-    }
 }
